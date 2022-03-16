@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdx-9u-4An">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="i5v-z9-oBF">
+            <objects>
+                <navigationController id="Qdx-9u-4An" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ie-na-uZ7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1bk-M5-5uP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qok-7S-LDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebservicesAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BKW-29-yOu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wpD-r1-iS0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zyA-gj-iD0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BKW-29-yOu" secondAttribute="bottom" id="17v-f5-IRm"/>
+                            <constraint firstItem="BKW-29-yOu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9qE-lb-Kzn"/>
+                            <constraint firstItem="BKW-29-yOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AaW-g3-MIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BKW-29-yOu" secondAttribute="trailing" id="Zy7-tJ-kUM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0EN-Pp-9tp"/>
+                    <connections>
+                        <outlet property="tableView" destination="BKW-29-yOu" id="fy5-KA-UGZ"/>
+                        <segue destination="4VE-wD-jAv" kind="push" identifier="navigateDogDetails" id="Lbo-Db-4e6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="108.48214285714285"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="O2g-Ui-Ibs">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="4VE-wD-jAv" customClass="DetailsViewController" customModule="WebservicesAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNl-XQ-VKM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzn-bu-XKz">
+                                <rect key="frame" x="10" y="108" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EGf-xx-ZjU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUi-cp-Mge">
+                                <rect key="frame" x="10" y="158" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="QFQ-ju-MMR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-sl-eP7">
+                                <rect key="frame" x="10" y="388" width="394" height="84"/>
+                                <string key="text">Dogs often chase cats, and most dogs will fetch a ball or stick. Dogs can smell and hear better than humans, but cannot see well in color because they are color blind. Due to the anatomy of the eye, dogs can see better in dim light than humans.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Veb-K9-7Mq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CUi-cp-Mge" firstAttribute="top" secondItem="wzn-bu-XKz" secondAttribute="bottom" constant="20" id="4yi-gN-l1i"/>
+                            <constraint firstItem="ayc-sl-eP7" firstAttribute="top" secondItem="CUi-cp-Mge" secondAttribute="bottom" constant="30" id="L2V-IU-shU"/>
+                            <constraint firstAttribute="trailing" secondItem="ayc-sl-eP7" secondAttribute="trailing" constant="10" id="Sej-2Y-33t"/>
+                            <constraint firstItem="wzn-bu-XKz" firstAttribute="top" secondItem="Veb-K9-7Mq" secondAttribute="top" constant="20" id="lMi-0e-k74"/>
+                            <constraint firstItem="wzn-bu-XKz" firstAttribute="leading" secondItem="Veb-K9-7Mq" secondAttribute="leading" constant="10" id="nF1-sJ-2PL"/>
+                            <constraint firstAttribute="trailing" secondItem="wzn-bu-XKz" secondAttribute="trailing" constant="10" id="piV-5f-jL8"/>
+                            <constraint firstItem="CUi-cp-Mge" firstAttribute="leading" secondItem="Veb-K9-7Mq" secondAttribute="leading" constant="10" id="rgd-bx-0E8"/>
+                            <constraint firstItem="ayc-sl-eP7" firstAttribute="leading" secondItem="Veb-K9-7Mq" secondAttribute="leading" constant="10" id="vJz-mY-ki8"/>
+                            <constraint firstItem="Veb-K9-7Mq" firstAttribute="trailing" secondItem="CUi-cp-Mge" secondAttribute="trailing" constant="10" id="xqn-si-t5m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2wW-uS-s6K"/>
+                    <connections>
+                        <outlet property="imageDog" destination="CUi-cp-Mge" id="gaE-wi-r24"/>
+                        <outlet property="lblDogDescription" destination="ayc-sl-eP7" id="EIs-kb-yPv"/>
+                        <outlet property="lblDogName" destination="wzn-bu-XKz" id="Bd5-HQ-Hit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJA-fu-ZFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
